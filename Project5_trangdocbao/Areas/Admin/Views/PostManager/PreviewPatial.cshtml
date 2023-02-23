@@ -1,0 +1,43 @@
+﻿@{
+    Layout = null;
+    var newsbyid = (List<Model.EntityFramework.BAIDANG>)ViewBag._k_news;
+
+}
+
+
+
+
+sapn
+
+
+<div class="modal fade " tabindex="-1" id="myAdd" role="dialog" aria-labelledby="addContactLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 1000px;margin: 1.75rem auto">     
+            <div class="container">
+                <div class="col-lg-8 col-lg-8-offset-2 col-md-8 col-md-8-offset-2">
+                    <!-- start content bottom left -->
+                    <div class="content_bottom_left">
+                        <div class="single_page_area">
+                            @foreach (var item in newsbyid)
+                            {
+                                <h3 class="post_titile post_titile12"> @item.TenBaiDang </h3>
+                                <div class="single_page_content">
+
+
+                                    <div class="post_commentbox">
+                                        <span>
+                                            <i class="fa fa-calendar"></i>@Convert.ToDateTime(@item.NgayDang).ToShortDateString()
+                                        </span>
+                                    </div>
+
+                                    <h4> @item.TieuDe</h4>
+
+                                    @Html.Raw(@item.NoiDung)
+
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>                
+            </div>       
+      </div>
+    </div>

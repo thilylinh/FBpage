@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+          content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Ample lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Ample admin lite dashboard bootstrap 5 dashboard template">
+    <meta name="description"
+          content="Ample Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Admin</title>
+    <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
+    <!-- Custom CSS -->
+    <link href="/Assets/AdminGeneral/css/style.min.css" rel="stylesheet">
+
+    <script src="/Assets/Admin/plugins/ckfinder/ckfinder.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    @RenderSection("stylesheet", required: false)
+
+    <script src="/Assets/Admin/MyScript.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+         data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar" data-navbarbg="skin5">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <div class="navbar-header" data-logobg="skin6">
+                    <!-- ============================================================== -->
+                    <!-- Logo -->
+                    <!-- ============================================================== -->
+                    <a class="navbar-brand" href="dashboard.html">
+                        <!-- Logo icon -->
+                        <b class="logo-icon">
+                            <!-- Dark Logo icon -->
+                            <img src="/Assets/AdminGeneral/plugins/images/logo-icon.png" alt="homepage" />
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text -->
+                        <span class="logo-text">
+                            <!-- dark Logo text -->
+                            <img src="/Assets/AdminGeneral/plugins/images/logo-text.png" alt="homepage" />
+                        </span>
+                    </a>
+                    <!-- ============================================================== -->
+                    <!-- End Logo -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"
+                       href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+                    <ul class="navbar-nav d-none d-md-block d-lg-none">
+                        <li class="nav-item">
+                            <a class="nav-toggler nav-link waves-effect waves-light text-white"
+                               href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+                        </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- Right side toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav ms-auto d-flex align-items-center">
+
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class=" in">
+                            <form role="search" class="app-search d-none d-md-block me-3">
+                                <input type="text" placeholder="Search..." class="form-control mt-0">
+                                <a href="" class="active">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </form>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                        <li>
+                            <a class="profile-pic" href="#">
+                                <img src="/Assets/AdminGeneral/plugins/images/users/varun.jpg" alt="user-img" width="36"
+                                     class="img-circle"><span class="text-white font-medium">Steave</span>
+                            </a>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar" data-sidebarbg="skin6">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <!-- User Profile-->
+                        <li class="sidebar-item pt-2">
+                            <div class="navbar-header">
+                                <a class="sidebar-link waves-effect waves-dark sidebar-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <span class="hide-menu">Quản lý tài khoản</span>
+                                </a>
+                            </div>
+                            <div class="collapse" id="collapseExample">
+                                <div class="container" style="background-color:#ddd">
+                                    <ul class="nav navbar-nav" style="background-color:#ddd;margin-left:40px">
+                                        <li style="color:#808080">
+                                            @Html.ActionLink("Tất cả tài khoản", "Index", "AccountManager", null, new { @style = "font-size:20px" })
+                                        </li>
+                                        <li style="color:#808080">
+                                            @Html.ActionLink("Danh sách admin", "ListAdmin", "AccountManager", null, new { @style = "font-size:20px" })
+                                        </li>
+                                        <li style="color:#808080">
+                                            @Html.ActionLink("Danh sách người đăng", "ListPoster", "AccountManager", null, new { @style = "font-size:20px" })
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="sidebar-item">
+                            <div class="navbar-header">
+                                <a class="sidebar-link waves-effect waves-dark sidebar-link" data-toggle="collapse" href="#collapsebai" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    <i class="fa fa-book" aria-hidden="true"></i>
+                                    <span class="hide-menu">QUẢN LÝ BÀI ĐĂNG</span>
+                                </a>
+                            </div>
+
+                            <div class="collapse" id="collapsebai">
+                                <div class="container" style="background-color:#ddd">
+                                    <ul class="nav navbar-nav" style="background-color:#ddd;margin-left:40px">
+                                        <li>
+                                            @Html.ActionLink("Soạn bài", "Create", "PostManager", null, new { @style = "font-size:20px" })
+                                        </li>
+                                        <li>
+                                            @Html.ActionLink("Danh sách bài đăng đã duyệt", "Index", "PostManager", null, new { @style = "font-size:20px" })
+                                        </li>
+                                        <li>
+                                            @Html.ActionLink("Danh sách bài đăng chờ duyệt", "PostWaiting", "PostManager", null, new { @style = "font-size:20px" })
+                                        </li>
+                                        <li>
+                                            @Html.ActionLink("Bài đăng của tôi", "MyPost", "PostManager", null, new { @style = "font-size:20px" })
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="sidebar-item">
+
+                            <div class="navbar-header">
+                                <a class="sidebar-link waves-effect waves-dark sidebar-link" data-toggle="collapse" href="#collapsetyple" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    <i class="fa fa-tree" aria-hidden="true"></i>
+                                    <span class="hide-menu">QUẢN LÝ THỂ LOẠI</span>
+                                </a>
+                            </div>
+
+                            <div class="collapse" id="collapsetyple">
+                                <div class="container" style="background-color:#ddd">
+                                    <ul class="nav navbar-nav" style="background-color:#ddd;margin-left:40px">
+                                        <li>
+                                            @Html.ActionLink("Thêm thể loại", "AddType", "TypeManager", null, new { @style = "font-size:20px" })
+                                        </li>
+                                        <li>
+                                            @Html.ActionLink("Danh sách thể loại", "Index", "TypeManager", null, new { @style = "font-size:20px" })
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="sidebar-item">
+
+                            <div class="navbar-header">
+                                <a class="sidebar-link waves-effect waves-dark sidebar-link" data-toggle="collapse" href="#collapsechuyende" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    <i class="fa fa-bars" aria-hidden="true"></i>
+                                    <span class="hide-menu">QUẢN LÝ CHUYÊN MỤC</span>
+                                </a>
+                            </div>
+
+                            <div class="collapse" id="collapsechuyende">
+                                <div class="container" style="background-color:#ddd">
+                                    <ul class="nav navbar-nav" style="background-color:#ddd;margin-left:40px">
+                                        <li>
+                                            @Html.ActionLink("Thêm chuyên mục", "AddCate", "CateManager", null, new { @style = "font-size:20px" })
+                                        </li>
+
+                                        <li>
+                                            @Html.ActionLink("Danh sách chuyên mục", "Index", "CateManager", null, new { @style = "font-size:20px" })
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <div class="page-wrapper" style="min-height: 250px;">
+
+
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+
+
+                @RenderSection("header", required: false)
+
+                @RenderBody()
+
+            </div>
+
+            <footer class="footer text-center">
+                @DateTime.Now.Year - Tạ Khánh Thiện
+            </footer>
+
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+
+
+    <script src="/Assets/AdminGeneral/plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="/Assets/AdminGeneral/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/Assets/AdminGeneral/js/app-style-switcher.js"></script>
+    <!--Wave Effects -->
+    <script src="/Assets/AdminGeneral/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="/Assets/AdminGeneral/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="/Assets/AdminGeneral/js/custom.js"></script>
+
+
+    <script src="/Assets/Admin/plugins/ckfinder/ckfinder.js"></script>
+    <script src="/Assets/Admin/plugins/ckeditor/ckeditor.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btn_avt_post').click(function (e) {
+                e.preventDefault();
+                var finder = new CKFinder();
+                finder.selectActionFunction = function (urlimage) {
+                    $('#txt_avt_post').val(urlimage);
+
+                    $('#image-preview__image').attr("src", urlimage);
+                };
+                finder.popup();
+            });
+
+            
+            var ckeditor = CKEDITOR.replace('txtnoidung', {
+                customConfig: '/Assets/Admin/ckeditor/config.js',
+            });;
+            //CKEDITOR.disableAutoInline = false;
+            //CKEDITOR.inline('txtnoidung');
+
+            var ckeditor1 = CKEDITOR.replace('tieuDe', {
+                customConfig: '/Assets/Admin/ckeditor/config.js',
+            });
+            ckeditor1.config.height = '3em';
+
+            var ckeditor2 = CKEDITOR.replace('phuDe', {
+                customConfig: '/Assets/Admin/ckeditor/config.js',
+            });
+            ckeditor2.config.height = '3em';
+
+        });
+    </script>
+    @RenderSection("Js", required: false)
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

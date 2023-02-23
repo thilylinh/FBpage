@@ -1,0 +1,8 @@
+﻿@model IEnumerable<WebApplication2.Models.BAIDANG>
+
+<h1>Home</h1>
+@foreach (var item in Model)
+{
+    <div>@item.TenBaiDang</div>
+    <div>@item.TieuDe</div>
+}

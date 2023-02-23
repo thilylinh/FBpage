@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="doan5_docbaoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BAIDANG">
+    <Key>
+      <PropertyRef Name="IDBaiDang" />
+    </Key>
+    <Property Name="IDBaiDang" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenBaiDang" Type="nvarchar" MaxLength="300" />
+    <Property Name="TieuDe" Type="nvarchar" MaxLength="300" />
+    <Property Name="UrlRequire" Type="nvarchar" MaxLength="200" />
+    <Property Name="AnhDaiDien" Type="nvarchar" MaxLength="500" />
+    <Property Name="NoiDung" Type="nvarchar(max)" />
+    <Property Name="IDTaiKhoan" Type="int" Nullable="false" />
+    <Property Name="NgayDang" Type="date" />
+    <Property Name="TrangThaiBaiDang" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDTheLoai" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CHUYENMUC">
+    <Key>
+      <PropertyRef Name="IDCM" />
+    </Key>
+    <Property Name="IDCM" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDCMCha" Type="int" />
+    <Property Name="TenCM" Type="nvarchar" MaxLength="50" />
+    <Property Name="Link" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="LUOTXEM">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="NgayThang" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NgayThang" Type="date" Nullable="false" />
+    <Property Name="IDBaiDang" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TAIKHOAN">
+    <Key>
+      <PropertyRef Name="IDTaiKhoan" />
+    </Key>
+    <Property Name="IDTaiKhoan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenTaiKhoan" Type="nvarchar" MaxLength="30" />
+    <Property Name="MatKhau" Type="nvarchar(max)" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgaySinh" Type="date" />
+    <Property Name="GioiTinh" Type="nvarchar" MaxLength="20" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="200" />
+    <Property Name="SDT" Type="nvarchar" MaxLength="30" />
+    <Property Name="AnhDaiDien" Type="nvarchar" MaxLength="100" />
+    <Property Name="TrangThaiNguoiDung" Type="nvarchar" MaxLength="50" />
+    <Property Name="QuyenHan" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="THELOAI">
+    <Key>
+      <PropertyRef Name="IDTheLoai" />
+    </Key>
+    <Property Name="IDTheLoai" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenTheLoai" Type="nvarchar" MaxLength="50" />
+    <Property Name="UrlRequire" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_BAIDANG_TAIKHOAN">
+    <End Role="TAIKHOAN" Type="Self.TAIKHOAN" Multiplicity="1" />
+    <End Role="BAIDANG" Type="Self.BAIDANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TAIKHOAN">
+        <PropertyRef Name="IDTaiKhoan" />
+      </Principal>
+      <Dependent Role="BAIDANG">
+        <PropertyRef Name="IDTaiKhoan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BAIDANG_THELOAI">
+    <End Role="THELOAI" Type="Self.THELOAI" Multiplicity="1" />
+    <End Role="BAIDANG" Type="Self.BAIDANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="THELOAI">
+        <PropertyRef Name="IDTheLoai" />
+      </Principal>
+      <Dependent Role="BAIDANG">
+        <PropertyRef Name="IDTheLoai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LUOTXEM_BAIDANG">
+    <End Role="BAIDANG" Type="Self.BAIDANG" Multiplicity="1" />
+    <End Role="LUOTXEM" Type="Self.LUOTXEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BAIDANG">
+        <PropertyRef Name="IDBaiDang" />
+      </Principal>
+      <Dependent Role="LUOTXEM">
+        <PropertyRef Name="IDBaiDang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="doan5_docbaoModelStoreContainer">
+    <EntitySet Name="BAIDANG" EntityType="Self.BAIDANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHUYENMUC" EntityType="Self.CHUYENMUC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LUOTXEM" EntityType="Self.LUOTXEM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TAIKHOAN" EntityType="Self.TAIKHOAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="THELOAI" EntityType="Self.THELOAI" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_BAIDANG_TAIKHOAN" Association="Self.FK_BAIDANG_TAIKHOAN">
+      <End Role="TAIKHOAN" EntitySet="TAIKHOAN" />
+      <End Role="BAIDANG" EntitySet="BAIDANG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BAIDANG_THELOAI" Association="Self.FK_BAIDANG_THELOAI">
+      <End Role="THELOAI" EntitySet="THELOAI" />
+      <End Role="BAIDANG" EntitySet="BAIDANG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LUOTXEM_BAIDANG" Association="Self.FK_LUOTXEM_BAIDANG">
+      <End Role="BAIDANG" EntitySet="BAIDANG" />
+      <End Role="LUOTXEM" EntitySet="LUOTXEM" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
