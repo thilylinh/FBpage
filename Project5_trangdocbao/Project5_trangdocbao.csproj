@@ -2407,7 +2407,6 @@
     <Content Include="Areas\Admin\Views\AccountManager\ListPoster.cshtml" />
     <Content Include="Areas\Admin\Views\AccountManager\ListAdmin.cshtml" />
     <Content Include="Areas\Admin\Views\PostManager\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\_Layout_User.cshtml" />
     <Content Include="Areas\Admin\Views\UserManager\ChangePassword.cshtml" />
     <Content Include="Areas\Admin\Views\UserManager\AccountInfo.cshtml" />
     <Content Include="Areas\Admin\Views\UserPostManager\MyPost.cshtml" />

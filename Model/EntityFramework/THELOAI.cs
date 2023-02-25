@@ -21,6 +21,8 @@ namespace Model.EntityFramework
         [StringLength(50)]
         public string UrlRequire { get; set; }
 
+        public string Domain { get; set; }
+
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BAIDANG> BAIDANGs { get; set; }

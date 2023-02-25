@@ -76,6 +76,10 @@
     <Compile Include="Migrations\202302220437202_init.Designer.cs">
       <DependentUpon>202302220437202_init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202302251354504_update-type.cs" />
+    <Compile Include="Migrations\202302251354504_update-type.Designer.cs">
+      <DependentUpon>202302251354504_update-type.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\BDViewModel.cs" />
@@ -94,6 +98,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202302220437202_init.resx">
       <DependentUpon>202302220437202_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302251354504_update-type.resx">
+      <DependentUpon>202302251354504_update-type.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

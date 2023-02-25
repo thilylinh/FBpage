@@ -48,8 +48,5 @@ namespace Project5_trangdocbao.Areas.Admin.ViewModels
         [Display(Name = "Thể loại")]
         public int IDTheLoai { get; set; }
         public bool IsDangBai { get; set; }
-
-
-    
     }
 }

@@ -28,7 +28,7 @@ namespace Model.DAO
         {
             try
             {
-                var tk1 = db.BAIDANGs.AsNoTracking().SingleOrDefault(x => x.IDBaiDang == tk.IDBaiDang);
+                var tk1 = db.BAIDANGs.SingleOrDefault(x => x.IDBaiDang == tk.IDBaiDang);
                 tk1.TenBaiDang = tk.TenBaiDang;
                 tk1.TieuDe = tk.TieuDe;
                 tk1.NoiDung = tk.NoiDung;
@@ -141,21 +141,9 @@ namespace Model.DAO
         {
             try
             {
-                var acc = db.BAIDANGs.AsNoTracking().SingleOrDefault(x => x.IDBaiDang == ID);
-                List<LUOTXEM> lxbd = db.LUOTXEMs.Where(x => x.IDBaiDang == ID).ToList();
-
-                //Xóa lượt xem trước khi xóa bài đăng
-                if (lxbd.Count() != 0)
-                {
-                    foreach (LUOTXEM item in lxbd)
-                    {
-                        db.LUOTXEMs.Remove(item);
-                        db.SaveChanges();
-                    }
-                }
-
+                var bd = db.BAIDANGs.SingleOrDefault(x => x.IDBaiDang == ID);
                 //Xóa bài đăng sau khi xóa lượt xem
-                db.BAIDANGs.Remove(acc);
+                bd.TrangThaiBaiDang = "CHỜ DUYỆT";
                 db.SaveChanges();
                 return true;
             }

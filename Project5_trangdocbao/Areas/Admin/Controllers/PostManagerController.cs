@@ -12,16 +12,12 @@ namespace Project5_trangdocbao.Areas.Admin.Controllers
 {
     public class PostManagerController : BaseAdminController
     {
-
         //
         // GET: /Admin/PostManager/
         //Tất cả bài đăng đã duyệt
         public ActionResult Index(string searchString, int page = 1, int pageSize = 10)
         {
             //Ghi file
-
-
-
             var dao = new PostDao();
             var model = dao.ListAll(searchString, page, pageSize);
             ViewBag.searchstring = searchString;
@@ -38,13 +34,11 @@ namespace Project5_trangdocbao.Areas.Admin.Controllers
             return View(model);
         }
         [HttpGet]
-
-        public ActionResult Create(bool? check)
+        public ActionResult Create()
         {
             GetTypeForPost();
             return View();
         }
-
 
         [HttpPost]
         [ValidateInput(false)]
@@ -60,7 +54,14 @@ namespace Project5_trangdocbao.Areas.Admin.Controllers
                 model.TieuDe = bd.TieuDe;
                 model.AnhDaiDien = bd.AnhDaiDien;
                 model.IDTheLoai = bd.IDTheLoai;
-                model.IdThe = bd.IDThe;
+                if (bd.IDThe <= -1)
+                {
+                    model.IdThe = null;
+                }
+                else
+                {
+                    model.IdThe = bd.IDThe;
+                }
                 model.UrlRequire = RewriteURL.RewriteUrl(bd.TenBaiDang);
                 if (bd.IsDangBai)
                     model.TrangThaiBaiDang = "đã duyệt";
@@ -80,7 +81,7 @@ namespace Project5_trangdocbao.Areas.Admin.Controllers
             }
             SetAlert("Soạn bài đăng thành công", "thanhcong");
             //return RedirectToAction("PostWaiting", "PostManager");
-            return Json(Url.Action("Index", "PostManager"));
+            return Json(Url.Action("MyPost", "PostManager"));
         }
 
 
@@ -303,7 +304,7 @@ namespace Project5_trangdocbao.Areas.Admin.Controllers
                 int idtk = int.Parse(Session["USER_ID"].ToString());
                 model.IDTaiKhoan = idtk;
                 model.NgayDang = DateTime.Now;
-                model.NoiDung = bd.NoiDung.Replace("<p>&nbsp;</p>", "").Replace("\n","").Replace("<p><figure>", "").Replace("</figure></p>", "").Replace("<p><img","<img").Replace("/></p>","/>");                
+                model.NoiDung = bd.NoiDung.Replace("<p>&nbsp;</p>", "").Replace("\n", "").Replace("<p><figure>", "").Replace("</figure></p>", "").Replace("<p><img", "<img").Replace("/></p>", "/>");
                 bd.IDBaiDang = 0;
                 var result = DAO.updatePost(model);
                 if (result)
@@ -375,16 +376,12 @@ namespace Project5_trangdocbao.Areas.Admin.Controllers
             return PartialView("PreviewPatial");
         }
 
-
-
         public ActionResult UnAcept(long id)
         {
             var dao = new PostDao();
             ViewBag._k_news = dao.NewsFindByID(id);
             return View();
         }
-
-
         //DUyệt bài
         public ActionResult DuyetBai(long id)
         {
@@ -402,9 +399,6 @@ namespace Project5_trangdocbao.Areas.Admin.Controllers
             SetAlert("Bỏ duyệt bài đăng thành công", "thanhcong");
             return RedirectToAction("PostWaiting", "PostManager");
         }
-
-
-
         //Lấy ra danh sách tất cả bài đăng của tôi
         public ActionResult MyPost(string searchString, int page = 1, int pageSize = 5)
         {
@@ -421,19 +415,12 @@ namespace Project5_trangdocbao.Areas.Admin.Controllers
                 ViewBag.searchstring = searchString;
             return View(model);
         }
-
-
         //lấy ra danh sách thể loại cho bài đăng
         public void GetTypeForPost(long? selectedid = null)
         {
             var dao = new TypeDao();
             ViewBag.IDTheLoai = new SelectList(dao.ListTypeForCreatePost(), "IDTheLoai", "TenTheLoai", selectedid);
         }
-
-
-
-
-
         //Xóa bài đăng
 
         [HttpGet]
@@ -441,7 +428,7 @@ namespace Project5_trangdocbao.Areas.Admin.Controllers
         {
             new PostDao().Delete(id);
             NewRSS.LoadRSS();
-            return RedirectToAction("Index");
+            return RedirectToAction("MyPost");
         }
     }
 }

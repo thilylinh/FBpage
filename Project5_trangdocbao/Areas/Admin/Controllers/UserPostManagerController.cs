@@ -23,9 +23,6 @@ namespace Project5_trangdocbao.Areas.Admin.Controllers
             return View();
         }
 
-
-
-
         [HttpPost]
         [ValidateInput(false)]
         public ActionResult Create(BAIDANG bd)

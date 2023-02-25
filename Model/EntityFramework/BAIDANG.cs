@@ -44,16 +44,13 @@ namespace Model.EntityFramework
 
         [StringLength(50)]
         public string TrangThaiBaiDang { get; set; }
+
         [Display(Name = "Thể loại")]
         public int IDTheLoai { get; set; }
-
-        public virtual TAIKHOAN TAIKHOAN { get; set; }
-
-        public virtual THELOAI THELOAI { get; set; }
-
         public int? IdThe { get; set; }
-
         public virtual The The { get; set; }
+        public virtual TAIKHOAN TAIKHOAN { get; set; }
+        public virtual THELOAI THELOAI { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LUOTXEM> LUOTXEMs { get; set; }
