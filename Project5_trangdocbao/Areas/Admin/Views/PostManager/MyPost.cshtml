@@ -1,6 +1,9 @@
-﻿@model PagedList.IPagedList<Model.EntityFramework.BAIDANG>
+﻿@model PagedList.IPagedList<Project5_trangdocbao.Areas.Admin.ViewModels.BAIDANGVM>
 @using PagedList.Mvc;
 
+@section Js{
+    <script src="~/Js/Copy.js"></script>
+}
 
 @{
     ViewBag.Title = "MyPost";
@@ -39,7 +42,7 @@
                     <thead>
                         <tr>
                             <th>Tên bài đăng</th>
-                            <th>Ảnh đại diện</th>
+                            <th>Ảnh đại diện</th>p
                             <th>Ngày đăng</th>
                             <th>Trạng thái</th>
                             <th>Chức năng</th>
@@ -48,34 +51,36 @@
                     <tbody>
                         @foreach (var item in Model)
                         {
-                        <tr id="row_@item.IDBaiDang" class="tb_tenbanghi">
+                            <tr id="row_@item.IDBaiDang" class="tb_tenbanghi">
 
-                            <td>
-                                @*<a href="/Admin/PostManager/Preview/@item.UrlRequire-@item.IDBaiDang">*@
-                                @item.TenBaiDang
-                                @*</a>*@
-                            </td>
-                            <td>
-                                <img style="width:60px;height:auto" src="@item.AnhDaiDien" class="img__lpost" alt=" alternate text" />
-                            </td>
-                            <td>@Convert.ToDateTime(@item.NgayDang).ToShortDateString()</td>
-                            <td> @item.TrangThaiBaiDang.ToUpper()</td>
-                            <td>
-                                <a href="/Admin/PostManager/UpdatePost/@item.IDBaiDang" class="clink_llll" title="Sửa bài đăng này">Sửa</a>
-                                @*<a href="/Admin/PostManager/Delete/@item.IDBaiDang" class="clink_llll" title="Sửa bài đăng này">Xóa</a>*@
-                                |
-                                @Ajax.ActionLink("Xóa", "Delete", new { @id = item.IDBaiDang }, new AjaxOptions
-                               {
-                                   Confirm = "Bạn có chắc chắn muốn xóa bản ghi?",
-                                   OnComplete = "$('#row_" + @item.IDBaiDang + "').fadeOut(300)",
-                                   HttpMethod = "Delete"
-                               }, new { @class = "clink_rrrr", @title = "Xóa bài đăng này", area = "Admin" }) | 
-                                <button class="btn btn-secondary">Copy-Link</button>
-                            </td>
-                        </tr>
+                                <td>
+                                    @*<a href="/Admin/PostManager/Preview/@item.UrlRequire-@item.IDBaiDang">*@
+                                    @item.TenBaiDang
+                                    @*</a>*@
+                                </td>
+                                <td>
+                                    <img style="width:60px;height:auto" src="@item.AnhDaiDien" class="img__lpost" alt=" alternate text" />
+                                </td>
+                                <td>@Convert.ToDateTime(@item.NgayDang).ToShortDateString()</td>
+                                <td> @item.TrangThaiBaiDang.ToUpper()</td>
+                                <td>
+                                    <a href="/Admin/PostManager/UpdatePost/@item.IDBaiDang" class="clink_llll" title="Sửa bài đăng này">Sửa</a>
+                                    @*<a href="/Admin/PostManager/Delete/@item.IDBaiDang" class="clink_llll" title="Sửa bài đăng này">Xóa</a>*@
+                                    |
+                                    @Ajax.ActionLink("Xóa", "Delete", new { @id = item.IDBaiDang }, new AjaxOptions
+                                   {
+                                       Confirm = "Bạn có chắc chắn muốn xóa bản ghi?",
+                                       OnComplete = "$('#row_" + @item.IDBaiDang + "').fadeOut(300)",
+                                       HttpMethod = "Delete"
+                                   }, new { @class = "clink_rrrr", @title = "Xóa bài đăng này", area = "Admin" }) |
+                                    <button class="btn btn-secondary" data-property="@item.Doamain">Copy-Link</button>
+                                </td>
+                            </tr>
                         }
                     </tbody>
                 </table>
+                <div id="copy-content">Nội dung cần sao chép</div>
+
 
 
                 @Html.PagedListPager(Model, page => Url.Action("MyPost", new { page, @searchString = @ViewBag.searchstring }))

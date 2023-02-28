@@ -12,10 +12,6 @@ namespace Project5_trangdocbao
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
-
-
-
             //Map cho trang đọc báo
             routes.MapRoute(
                 name: "DocBao",

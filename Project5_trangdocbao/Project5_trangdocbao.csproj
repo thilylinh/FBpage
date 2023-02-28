@@ -2719,6 +2719,7 @@
     <Content Include="Images\images\Post\4fc6cb8a_54662163_một ngày mệt mỏi của chúa sơn lâm.jpg" />
     <Content Include="Images\_thumbs\Files\4fc6cb8a_54662163_một ngày mệt mỏi của chúa sơn lâm.jpg" />
     <Content Include="Images\_thumbs\Images\Post\4fc6cb8a_54662163_một ngày mệt mỏi của chúa sơn lâm.jpg" />
+    <Content Include="Js\Copy.js" />
     <Content Include="Js\Tag.js" />
     <Content Include="Js\JavaScript2.js" />
     <Content Include="Js\JavaScript.js" />

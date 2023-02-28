@@ -19,6 +19,11 @@ namespace Model.DAO
             return db.THELOAIs.OrderByDescending(i => i.IDTheLoai).ToPagedList(page, pageSize);
         }
 
+        public List<THELOAI> GetAll()
+        {
+            return db.THELOAIs.AsNoTracking().ToList();
+        }
+
         public List<THELOAI> ListTypeForCreatePost()
         {
             return db.THELOAIs.ToList();

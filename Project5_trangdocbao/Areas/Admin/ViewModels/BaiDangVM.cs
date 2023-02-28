@@ -9,14 +9,7 @@ namespace Project5_trangdocbao.Areas.Admin.ViewModels
         {
            
         }
-
-        [Key]
-
- 
         public int IDBaiDang { get; set; }
-
-     
-
         [Display(Name = "Tên bài đăng")]
         public string TenBaiDang { get; set; }
 
@@ -48,5 +41,6 @@ namespace Project5_trangdocbao.Areas.Admin.ViewModels
         [Display(Name = "Thể loại")]
         public int IDTheLoai { get; set; }
         public bool IsDangBai { get; set; }
+        public  string Doamain { get; set; }
     }
 }

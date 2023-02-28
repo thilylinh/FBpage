@@ -1,5 +1,6 @@
 ﻿using Model.DAO;
 using Model.EntityFramework;
+using PagedList;
 using Project5_trangdocbao.Areas.Admin.Models;
 using Project5_trangdocbao.Areas.Admin.ViewModels;
 using Project5_trangdocbao.Common;
@@ -402,10 +403,26 @@ namespace Project5_trangdocbao.Areas.Admin.Controllers
         //Lấy ra danh sách tất cả bài đăng của tôi
         public ActionResult MyPost(string searchString, int page = 1, int pageSize = 5)
         {
+            var dbWithDomain = new List<BAIDANGVM>();
             var postdao = new PostDao();
             var userSession = new UserInfo();
             int idtk = int.Parse(Session["USER_ID"].ToString());
+            // get all The Loai
+            var types = new TypeDao().GetAll();
             var model = postdao.MyPost(searchString, page, pageSize, idtk);
+            foreach (var bd in model)
+            {
+                var domain = types.Where(x => x.IDTheLoai == bd.IDTheLoai).Select(x => x.Domain).FirstOrDefault();
+                dbWithDomain.Add(new BAIDANGVM
+                {
+                    IDBaiDang = bd.IDBaiDang,
+                    TenBaiDang = bd.TenBaiDang,
+                    NgayDang = bd.NgayDang,
+                    TrangThaiBaiDang = bd.TrangThaiBaiDang,
+                    AnhDaiDien = bd.AnhDaiDien,
+                    Doamain = domain + "doc-bao" + bd.TenBaiDang + "-" + bd.IDBaiDang,
+                });
+            }
             if (model.Count() == 0)
             {
                 //Response.Write("<script>alert('Tài khoản của bạn hiện chưa có bài đăng nào!');window.location.href='Index'; </script>");
@@ -413,7 +430,8 @@ namespace Project5_trangdocbao.Areas.Admin.Controllers
             }
             else
                 ViewBag.searchstring = searchString;
-            return View(model);
+            var modelRes = dbWithDomain.AsEnumerable();
+            return View(modelRes.ToPagedList(page, pageSize));
         }
         //lấy ra danh sách thể loại cho bài đăng
         public void GetTypeForPost(long? selectedid = null)

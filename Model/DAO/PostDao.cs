@@ -136,6 +136,7 @@ namespace Model.DAO
             return model.OrderByDescending(x => x.IDBaiDang).ToPagedList(page, pageSize);
 
         }
+
         //Xóa bài đăng
         public bool Delete(int ID)
         {
