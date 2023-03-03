@@ -35,26 +35,29 @@
     SOẠN BÀI ĐĂNG
 }
 
+@using (Html.BeginForm("GetDataAllowUrl", "PostManager", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-md-9">
+            <div class="form-group">
+                <input class="form-control" placeholder="Url" type="text" name="url"/>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-success" type="submit">Lấy URL</button>
+        </div>
+    </div>
+}
+
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
     @*<div id="modal-placeholder"></div>*@
-    <div class="row">
-        <div class="col-md-9">
-            <div class="form-group">
-                <input class="form-control" placeholder="Url" type="text" />
-            </div>
-        </div>
-        <div class="col-md-3">
-            <button class="btn btn-success">Lấy URL</button>
-        </div>
-    </div>
+
     <div class="row" id="divContent">
 
         <div class="col">
-
-
             <fieldset>
                 @*CHỌN THỂ LOẠI__________________________________*@
                 <div class="form-group">

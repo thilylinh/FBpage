@@ -456,5 +456,11 @@ namespace Project5_trangdocbao.Areas.Admin.Controllers
             new PostDao().UpdateIsPublic(id);
             return RedirectToAction("MyPost");
         }
+
+        public ActionResult GetDataAllowUrl(string url)
+        {
+            // todo here
+            return RedirectToAction("MyPost");
+        }
     }
 }
