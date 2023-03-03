@@ -401,15 +401,16 @@ namespace Project5_trangdocbao.Areas.Admin.Controllers
             return RedirectToAction("PostWaiting", "PostManager");
         }
         //Lấy ra danh sách tất cả bài đăng của tôi
-        public ActionResult MyPost(string searchString, int page = 1, int pageSize = 5)
+        public ActionResult MyPost(string searchString,bool? myRadio, int page = 1, int pageSize = 5)
         {
             var dbWithDomain = new List<BAIDANGVM>();
             var postdao = new PostDao();
             var userSession = new UserInfo();
             int idtk = int.Parse(Session["USER_ID"].ToString());
+            ViewBag.IsPublic = myRadio;
             // get all The Loai
             var types = new TypeDao().GetAll();
-            var model = postdao.MyPost(searchString, page, pageSize, idtk);
+            var model = postdao.MyPost(searchString, myRadio, page, pageSize, idtk);
             foreach (var bd in model)
             {
                 var domain = types.Where(x => x.IDTheLoai == bd.IDTheLoai).Select(x => x.Domain).FirstOrDefault();
@@ -421,6 +422,7 @@ namespace Project5_trangdocbao.Areas.Admin.Controllers
                     TrangThaiBaiDang = bd.TrangThaiBaiDang,
                     AnhDaiDien = bd.AnhDaiDien,
                     Doamain = domain + "doc-bao" + bd.TenBaiDang + "-" + bd.IDBaiDang,
+                    IsPublic = bd.IsPublic,
                 });
             }
             if (model.Count() == 0)
@@ -446,6 +448,12 @@ namespace Project5_trangdocbao.Areas.Admin.Controllers
         {
             new PostDao().Delete(id);
             NewRSS.LoadRSS();
+            return RedirectToAction("MyPost");
+        }
+
+        public ActionResult UpdateIsPublic(int id)
+        {
+            new PostDao().UpdateIsPublic(id);
             return RedirectToAction("MyPost");
         }
     }

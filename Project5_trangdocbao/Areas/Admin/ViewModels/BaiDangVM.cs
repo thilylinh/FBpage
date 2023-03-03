@@ -42,5 +42,6 @@ namespace Project5_trangdocbao.Areas.Admin.ViewModels
         public int IDTheLoai { get; set; }
         public bool IsDangBai { get; set; }
         public  string Doamain { get; set; }
+        public bool IsPublic { get; set; }
     }
 }

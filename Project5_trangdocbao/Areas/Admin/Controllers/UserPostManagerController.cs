@@ -50,12 +50,12 @@ namespace Project5_trangdocbao.Areas.Admin.Controllers
         }
 
         //Lấy ra danh sách tất cả bài đăng
-        public ActionResult MyPost(string searchString, int page = 1, int pageSize = 5)
+        public ActionResult MyPost(string searchString,bool? myRadio, int page = 1, int pageSize = 5)
         {
             var postdao = new PostDao();
             var userSession = new UserInfo();
             int idtk = int.Parse(Session["USER_ID"].ToString());
-            var model = postdao.MyPost(searchString, page, pageSize, idtk);
+            var model = postdao.MyPost(searchString, myRadio, page, pageSize, idtk);
             ViewBag.searchstring = searchString;
             return View(model);
         }

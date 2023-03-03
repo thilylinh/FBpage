@@ -57,7 +57,7 @@ namespace Model.DAO
             {
                 model = model.Where(x => x.TenBaiDang.Contains(searchString) || x.TieuDe.Contains(searchString));
             }
-            
+
             var result = model.OrderByDescending(x => x.IDBaiDang).ToPagedList(page, pageSize);
             foreach (var item in result)
             {
@@ -67,7 +67,7 @@ namespace Model.DAO
                 }
             }
 
-          
+
 
             if (result != null)
             {
@@ -126,12 +126,16 @@ namespace Model.DAO
             return db.BAIDANGs.Where(x => x.TrangThaiBaiDang.ToUpper() == "ĐÃ DUYỆT").AsNoTracking().OrderByDescending(x => x.IDBaiDang).Take(5).Skip(1).ToList();
         }
         //Lấy tất cả bài đăng theo ID tài khoản
-        public IEnumerable<BAIDANG> MyPost(string searchString, int page, int pageSize, int idtk)
+        public IEnumerable<BAIDANG> MyPost(string searchString,bool? myRadio, int page, int pageSize, int idtk)
         {
             IQueryable<BAIDANG> model = db.BAIDANGs.Where(x => x.IDTaiKhoan == idtk).AsNoTracking().OrderBy(x => x.TrangThaiBaiDang);
             if (!string.IsNullOrEmpty(searchString))
             {
                 model = model.Where(x => x.TenBaiDang.Contains(searchString) || x.TieuDe.Contains(searchString));
+            }
+            if(myRadio != null)
+            {
+                model = model.Where(x => x.IsPublic == myRadio);
             }
             return model.OrderByDescending(x => x.IDBaiDang).ToPagedList(page, pageSize);
 
@@ -149,6 +153,23 @@ namespace Model.DAO
                 return true;
             }
             catch (Exception)
+            {
+                return false;
+            }
+
+        }
+
+        // update isPublic 
+        public bool UpdateIsPublic(int id)
+        {
+            try
+            {
+                var bd = db.BAIDANGs.FirstOrDefault(x => x.IDBaiDang == id);
+                bd.IsPublic = true;
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
             {
                 return false;
             }
@@ -220,43 +241,5 @@ namespace Model.DAO
             var test = db.TAIKHOANs.ToList();
             return db.TAIKHOANs.Where(x => x.IDTaiKhoan == idtk).ToList();
         }
-        //public IEnumerable<BDViewModel> postLove()
-        //{
-        //    var postlovelist = (from a in db.BAIDANGs
-        //                        join b in db.CHITIET_BAIDANG_THELOAI on a.IDBaiDang equals b.IDBaiDang
-        //                        where (b.IDTheLoai == 1 && b.IDBaiDang == a.IDBaiDang && a.TrangThaiBaiDang.ToUpper() == "ĐÃ DUYỆT")
-        //                        select new BDViewModel
-        //                        {
-        //                            IDBaiDang = a.IDBaiDang,
-        //                            TenBaiDang = a.TenBaiDang,
-        //                            TieuDe = a.TieuDe,
-        //                            AnhDaiDien = a.AnhDaiDien,
-        //                            NgayDang=a.NgayDang,
-        //                            UrlRequire=a.UrlRequire
-
-        //                        }
-        //                        ).OrderByDescending(x => x.IDBaiDang).Take(4).ToList();
-        //    return postlovelist;
-
-        //}
-
-        //public IEnumerable<BDViewModel> postDoiSong()
-        //{
-        //    var postlovelist = (from a in db.BAIDANGs
-        //                        join b in db.CHITIET_BAIDANG_THELOAI on a.IDBaiDang equals b.IDBaiDang
-        //                        where (b.IDTheLoai == 2 && b.IDBaiDang == a.IDBaiDang && a.TrangThaiBaiDang.ToUpper()=="ĐÃ DUYỆT")
-        //                        select new BDViewModel
-        //                        {
-        //                            IDBaiDang = a.IDBaiDang,
-        //                            TenBaiDang = a.TenBaiDang,
-        //                            TieuDe = a.TieuDe,
-        //                            AnhDaiDien = a.AnhDaiDien,
-        //                            NgayDang=a.NgayDang,
-        //                            UrlRequire=a.UrlRequire
-
-        //                        }
-        //                        ).OrderByDescending(x => x.IDBaiDang).Take(4).ToList();
-        //    return postlovelist;
-        //}
     }
 }

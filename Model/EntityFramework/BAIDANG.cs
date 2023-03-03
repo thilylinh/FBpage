@@ -44,6 +44,7 @@ namespace Model.EntityFramework
 
         [StringLength(50)]
         public string TrangThaiBaiDang { get; set; }
+        public bool IsPublic { get; set; }
 
         [Display(Name = "Thể loại")]
         public int IDTheLoai { get; set; }
