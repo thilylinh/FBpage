@@ -1,7 +1,7 @@
-*.dll
-.vs/
-*.vsidx
-*.dll
-*.vsidx
-bin/
-Debug/
+# *.dll
+# .vs/
+# *.vsidx
+# *.dll
+# *.vsidx
+# bin/
+# Debug/

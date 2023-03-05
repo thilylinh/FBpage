@@ -1,0 +1,170 @@
+D:\HOc Tap\Nam 4\Do an 5\Project5_trangdocbao\Model\bin\Debug\Model.dll.config
+D:\HOc Tap\Nam 4\Do an 5\Project5_trangdocbao\Model\bin\Debug\Model.dll
+D:\HOc Tap\Nam 4\Do an 5\Project5_trangdocbao\Model\bin\Debug\Model.pdb
+D:\HOc Tap\Nam 4\Do an 5\Project5_trangdocbao\Model\bin\Debug\EntityFramework.dll
+D:\HOc Tap\Nam 4\Do an 5\Project5_trangdocbao\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\HOc Tap\Nam 4\Do an 5\Project5_trangdocbao\Model\bin\Debug\PagedList.dll
+D:\HOc Tap\Nam 4\Do an 5\Project5_trangdocbao\Model\bin\Debug\PagedList.Mvc.dll
+D:\HOc Tap\Nam 4\Do an 5\Project5_trangdocbao\Model\bin\Debug\EntityFramework.xml
+D:\HOc Tap\Nam 4\Do an 5\Project5_trangdocbao\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\HOc Tap\Nam 4\Do an 5\Project5_trangdocbao\Model\bin\Debug\PagedList.xml
+D:\HOc Tap\Nam 4\Do an 5\Project5_trangdocbao\Model\bin\Debug\PagedList.Mvc.xml
+D:\HOc Tap\Nam 4\Do an 5\Project5_trangdocbao\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\HOc Tap\Nam 4\Do an 5\Project5_trangdocbao\Model\obj\Debug\Model.dll
+D:\HOc Tap\Nam 4\Do an 5\Project5_trangdocbao\Model\obj\Debug\Model.pdb
+E:\Project test\BTL_Webtintuc_hau\Project5_trangdocbao\Model\bin\Debug\Model.dll.config
+E:\Project test\BTL_Webtintuc_hau\Project5_trangdocbao\Model\bin\Debug\Model.dll
+E:\Project test\BTL_Webtintuc_hau\Project5_trangdocbao\Model\bin\Debug\Model.pdb
+E:\Project test\BTL_Webtintuc_hau\Project5_trangdocbao\Model\bin\Debug\EntityFramework.dll
+E:\Project test\BTL_Webtintuc_hau\Project5_trangdocbao\Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\Project test\BTL_Webtintuc_hau\Project5_trangdocbao\Model\bin\Debug\PagedList.dll
+E:\Project test\BTL_Webtintuc_hau\Project5_trangdocbao\Model\bin\Debug\PagedList.Mvc.dll
+E:\Project test\BTL_Webtintuc_hau\Project5_trangdocbao\Model\bin\Debug\EntityFramework.xml
+E:\Project test\BTL_Webtintuc_hau\Project5_trangdocbao\Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\Project test\BTL_Webtintuc_hau\Project5_trangdocbao\Model\bin\Debug\PagedList.xml
+E:\Project test\BTL_Webtintuc_hau\Project5_trangdocbao\Model\bin\Debug\PagedList.Mvc.xml
+E:\Project test\BTL_Webtintuc_hau\Project5_trangdocbao\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+E:\Project test\BTL_Webtintuc_hau\Project5_trangdocbao\Model\obj\Debug\Model.dll
+E:\Project test\BTL_Webtintuc_hau\Project5_trangdocbao\Model\obj\Debug\Model.pdb
+F:\DUANNGOAI\TapChi\webtintuc_fulldatabase\Project5_trangdocbao\Model\bin\Debug\Model.dll.config
+F:\DUANNGOAI\TapChi\webtintuc_fulldatabase\Project5_trangdocbao\Model\bin\Debug\Model.dll
+F:\DUANNGOAI\TapChi\webtintuc_fulldatabase\Project5_trangdocbao\Model\bin\Debug\Model.pdb
+F:\DUANNGOAI\TapChi\webtintuc_fulldatabase\Project5_trangdocbao\Model\bin\Debug\EntityFramework.dll
+F:\DUANNGOAI\TapChi\webtintuc_fulldatabase\Project5_trangdocbao\Model\bin\Debug\EntityFramework.SqlServer.dll
+F:\DUANNGOAI\TapChi\webtintuc_fulldatabase\Project5_trangdocbao\Model\bin\Debug\PagedList.dll
+F:\DUANNGOAI\TapChi\webtintuc_fulldatabase\Project5_trangdocbao\Model\bin\Debug\PagedList.Mvc.dll
+F:\DUANNGOAI\TapChi\webtintuc_fulldatabase\Project5_trangdocbao\Model\bin\Debug\EntityFramework.xml
+F:\DUANNGOAI\TapChi\webtintuc_fulldatabase\Project5_trangdocbao\Model\bin\Debug\EntityFramework.SqlServer.xml
+F:\DUANNGOAI\TapChi\webtintuc_fulldatabase\Project5_trangdocbao\Model\bin\Debug\PagedList.xml
+F:\DUANNGOAI\TapChi\webtintuc_fulldatabase\Project5_trangdocbao\Model\bin\Debug\PagedList.Mvc.xml
+F:\DUANNGOAI\TapChi\webtintuc_fulldatabase\Project5_trangdocbao\Model\obj\Debug\Model.Migrations.DocBaoDataContext.resources
+F:\DUANNGOAI\TapChi\webtintuc_fulldatabase\Project5_trangdocbao\Model\obj\Debug\Model.Migrations.addTuCam.resources
+F:\DUANNGOAI\TapChi\webtintuc_fulldatabase\Project5_trangdocbao\Model\obj\Debug\Model.csproj.GenerateResource.cache
+F:\DUANNGOAI\TapChi\webtintuc_fulldatabase\Project5_trangdocbao\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+F:\DUANNGOAI\TapChi\webtintuc_fulldatabase\Project5_trangdocbao\Model\obj\Debug\Model.csproj.CopyComplete
+F:\DUANNGOAI\TapChi\webtintuc_fulldatabase\Project5_trangdocbao\Model\obj\Debug\Model.dll
+F:\DUANNGOAI\TapChi\webtintuc_fulldatabase\Project5_trangdocbao\Model\obj\Debug\Model.pdb
+C:\code\TapChiDoiSong\Model\bin\Debug\Model.dll.config
+C:\code\TapChiDoiSong\Model\bin\Debug\Model.dll
+C:\code\TapChiDoiSong\Model\bin\Debug\Model.pdb
+C:\code\TapChiDoiSong\Model\bin\Debug\EntityFramework.dll
+C:\code\TapChiDoiSong\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\code\TapChiDoiSong\Model\bin\Debug\PagedList.dll
+C:\code\TapChiDoiSong\Model\bin\Debug\PagedList.Mvc.dll
+C:\code\TapChiDoiSong\Model\bin\Debug\EntityFramework.xml
+C:\code\TapChiDoiSong\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\code\TapChiDoiSong\Model\bin\Debug\PagedList.xml
+C:\code\TapChiDoiSong\Model\bin\Debug\PagedList.Mvc.xml
+C:\code\TapChiDoiSong\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\code\TapChiDoiSong\Model\obj\Debug\Model.Migrations.DocBaoDataContext.resources
+C:\code\TapChiDoiSong\Model\obj\Debug\Model.Migrations.addTuCam.resources
+C:\code\TapChiDoiSong\Model\obj\Debug\Model.csproj.GenerateResource.cache
+C:\code\TapChiDoiSong\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\code\TapChiDoiSong\Model\obj\Debug\Model.csproj.CopyComplete
+C:\code\TapChiDoiSong\Model\obj\Debug\Model.dll
+C:\code\TapChiDoiSong\Model\obj\Debug\Model.pdb
+C:\code\TapChiDoiSong\Model\obj\Debug\Model.Migrations.ccc.resources
+F:\DUANNGOAI\TapChiDoiSong\Model\bin\Debug\Model.dll.config
+F:\DUANNGOAI\TapChiDoiSong\Model\bin\Debug\Model.dll
+F:\DUANNGOAI\TapChiDoiSong\Model\bin\Debug\Model.pdb
+F:\DUANNGOAI\TapChiDoiSong\Model\bin\Debug\EntityFramework.dll
+F:\DUANNGOAI\TapChiDoiSong\Model\bin\Debug\EntityFramework.SqlServer.dll
+F:\DUANNGOAI\TapChiDoiSong\Model\bin\Debug\PagedList.dll
+F:\DUANNGOAI\TapChiDoiSong\Model\bin\Debug\PagedList.Mvc.dll
+F:\DUANNGOAI\TapChiDoiSong\Model\bin\Debug\EntityFramework.xml
+F:\DUANNGOAI\TapChiDoiSong\Model\bin\Debug\EntityFramework.SqlServer.xml
+F:\DUANNGOAI\TapChiDoiSong\Model\bin\Debug\PagedList.xml
+F:\DUANNGOAI\TapChiDoiSong\Model\bin\Debug\PagedList.Mvc.xml
+F:\DUANNGOAI\TapChiDoiSong\Model\obj\Debug\Model.csprojAssemblyReference.cache
+F:\DUANNGOAI\TapChiDoiSong\Model\obj\Debug\Model.Migrations.DocBaoDataContext.resources
+F:\DUANNGOAI\TapChiDoiSong\Model\obj\Debug\Model.Migrations.addTuCam.resources
+F:\DUANNGOAI\TapChiDoiSong\Model\obj\Debug\Model.Migrations.ccc.resources
+F:\DUANNGOAI\TapChiDoiSong\Model\obj\Debug\Model.csproj.GenerateResource.cache
+F:\DUANNGOAI\TapChiDoiSong\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+F:\DUANNGOAI\TapChiDoiSong\Model\obj\Debug\Model.csproj.CopyComplete
+F:\DUANNGOAI\TapChiDoiSong\Model\obj\Debug\Model.dll
+F:\DUANNGOAI\TapChiDoiSong\Model\obj\Debug\Model.pdb
+F:\DUANNGOAI\TapChiDoiSong\Model\obj\Debug\Model.Migrations.a.resources
+D:\TapChiDoiSong\Model\bin\Debug\Model.dll.config
+D:\TapChiDoiSong\Model\bin\Debug\Model.dll
+D:\TapChiDoiSong\Model\bin\Debug\Model.pdb
+D:\TapChiDoiSong\Model\bin\Debug\EntityFramework.dll
+D:\TapChiDoiSong\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\TapChiDoiSong\Model\bin\Debug\PagedList.dll
+D:\TapChiDoiSong\Model\bin\Debug\PagedList.Mvc.dll
+D:\TapChiDoiSong\Model\bin\Debug\EntityFramework.xml
+D:\TapChiDoiSong\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\TapChiDoiSong\Model\bin\Debug\PagedList.xml
+D:\TapChiDoiSong\Model\bin\Debug\PagedList.Mvc.xml
+D:\TapChiDoiSong\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+D:\TapChiDoiSong\Model\obj\Debug\Model.Migrations.DocBaoDataContext.resources
+D:\TapChiDoiSong\Model\obj\Debug\Model.Migrations.addTuCam.resources
+D:\TapChiDoiSong\Model\obj\Debug\Model.Migrations.ccc.resources
+D:\TapChiDoiSong\Model\obj\Debug\Model.Migrations.a.resources
+D:\TapChiDoiSong\Model\obj\Debug\Model.csproj.GenerateResource.cache
+D:\TapChiDoiSong\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\TapChiDoiSong\Model\obj\Debug\Model.csproj.CopyComplete
+D:\TapChiDoiSong\Model\obj\Debug\Model.dll
+D:\TapChiDoiSong\Model\obj\Debug\Model.pdb
+C:\Users\PNComputer\TapChiDoiSong\Model\bin\Debug\Model.dll.config
+C:\Users\PNComputer\TapChiDoiSong\Model\bin\Debug\Model.dll
+C:\Users\PNComputer\TapChiDoiSong\Model\bin\Debug\Model.pdb
+C:\Users\PNComputer\TapChiDoiSong\Model\bin\Debug\EntityFramework.dll
+C:\Users\PNComputer\TapChiDoiSong\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PNComputer\TapChiDoiSong\Model\bin\Debug\PagedList.dll
+C:\Users\PNComputer\TapChiDoiSong\Model\bin\Debug\PagedList.Mvc.dll
+C:\Users\PNComputer\TapChiDoiSong\Model\bin\Debug\EntityFramework.xml
+C:\Users\PNComputer\TapChiDoiSong\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PNComputer\TapChiDoiSong\Model\bin\Debug\PagedList.xml
+C:\Users\PNComputer\TapChiDoiSong\Model\bin\Debug\PagedList.Mvc.xml
+C:\Users\PNComputer\TapChiDoiSong\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\PNComputer\TapChiDoiSong\Model\obj\Debug\Model.Migrations.DocBaoDataContext.resources
+C:\Users\PNComputer\TapChiDoiSong\Model\obj\Debug\Model.Migrations.addTuCam.resources
+C:\Users\PNComputer\TapChiDoiSong\Model\obj\Debug\Model.Migrations.ccc.resources
+C:\Users\PNComputer\TapChiDoiSong\Model\obj\Debug\Model.Migrations.a.resources
+C:\Users\PNComputer\TapChiDoiSong\Model\obj\Debug\Model.csproj.GenerateResource.cache
+C:\Users\PNComputer\TapChiDoiSong\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\PNComputer\TapChiDoiSong\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\PNComputer\TapChiDoiSong\Model\obj\Debug\Model.dll
+C:\Users\PNComputer\TapChiDoiSong\Model\obj\Debug\Model.pdb
+C:\Users\PNComputer\source\repos\TapChiDoiSong\Model\bin\Debug\Model.dll.config
+C:\Users\PNComputer\source\repos\TapChiDoiSong\Model\bin\Debug\Model.dll
+C:\Users\PNComputer\source\repos\TapChiDoiSong\Model\bin\Debug\Model.pdb
+C:\Users\PNComputer\source\repos\TapChiDoiSong\Model\bin\Debug\EntityFramework.dll
+C:\Users\PNComputer\source\repos\TapChiDoiSong\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PNComputer\source\repos\TapChiDoiSong\Model\bin\Debug\PagedList.dll
+C:\Users\PNComputer\source\repos\TapChiDoiSong\Model\bin\Debug\PagedList.Mvc.dll
+C:\Users\PNComputer\source\repos\TapChiDoiSong\Model\bin\Debug\EntityFramework.xml
+C:\Users\PNComputer\source\repos\TapChiDoiSong\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PNComputer\source\repos\TapChiDoiSong\Model\bin\Debug\PagedList.xml
+C:\Users\PNComputer\source\repos\TapChiDoiSong\Model\bin\Debug\PagedList.Mvc.xml
+C:\Users\PNComputer\source\repos\TapChiDoiSong\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\PNComputer\source\repos\TapChiDoiSong\Model\obj\Debug\Model.Migrations.DocBaoDataContext.resources
+C:\Users\PNComputer\source\repos\TapChiDoiSong\Model\obj\Debug\Model.Migrations.addTuCam.resources
+C:\Users\PNComputer\source\repos\TapChiDoiSong\Model\obj\Debug\Model.Migrations.ccc.resources
+C:\Users\PNComputer\source\repos\TapChiDoiSong\Model\obj\Debug\Model.Migrations.a.resources
+C:\Users\PNComputer\source\repos\TapChiDoiSong\Model\obj\Debug\Model.csproj.GenerateResource.cache
+C:\Users\PNComputer\source\repos\TapChiDoiSong\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\PNComputer\source\repos\TapChiDoiSong\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\PNComputer\source\repos\TapChiDoiSong\Model\obj\Debug\Model.dll
+C:\Users\PNComputer\source\repos\TapChiDoiSong\Model\obj\Debug\Model.pdb
+D:\Freelancer\FB\TapChiDoiSong\TapChiDoiSong\Model\bin\Debug\Model.dll.config
+D:\Freelancer\FB\TapChiDoiSong\TapChiDoiSong\Model\bin\Debug\Model.dll
+D:\Freelancer\FB\TapChiDoiSong\TapChiDoiSong\Model\bin\Debug\Model.pdb
+D:\Freelancer\FB\TapChiDoiSong\TapChiDoiSong\Model\bin\Debug\EntityFramework.dll
+D:\Freelancer\FB\TapChiDoiSong\TapChiDoiSong\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Freelancer\FB\TapChiDoiSong\TapChiDoiSong\Model\bin\Debug\PagedList.dll
+D:\Freelancer\FB\TapChiDoiSong\TapChiDoiSong\Model\bin\Debug\PagedList.Mvc.dll
+D:\Freelancer\FB\TapChiDoiSong\TapChiDoiSong\Model\bin\Debug\EntityFramework.xml
+D:\Freelancer\FB\TapChiDoiSong\TapChiDoiSong\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Freelancer\FB\TapChiDoiSong\TapChiDoiSong\Model\bin\Debug\PagedList.xml
+D:\Freelancer\FB\TapChiDoiSong\TapChiDoiSong\Model\bin\Debug\PagedList.Mvc.xml
+D:\Freelancer\FB\TapChiDoiSong\TapChiDoiSong\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+D:\Freelancer\FB\TapChiDoiSong\TapChiDoiSong\Model\obj\Debug\Model.Migrations.init.resources
+D:\Freelancer\FB\TapChiDoiSong\TapChiDoiSong\Model\obj\Debug\Model.csproj.GenerateResource.cache
+D:\Freelancer\FB\TapChiDoiSong\TapChiDoiSong\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\Freelancer\FB\TapChiDoiSong\TapChiDoiSong\Model\obj\Debug\Model.csproj.CopyComplete
+D:\Freelancer\FB\TapChiDoiSong\TapChiDoiSong\Model\obj\Debug\Model.dll
+D:\Freelancer\FB\TapChiDoiSong\TapChiDoiSong\Model\obj\Debug\Model.pdb
+D:\Freelancer\FB\TapChiDoiSong\TapChiDoiSong\Model\obj\Debug\Model.Migrations.updatetype.resources
+D:\Freelancer\FB\TapChiDoiSong\TapChiDoiSong\Model\obj\Debug\Model.Migrations.add_ispublic.resources

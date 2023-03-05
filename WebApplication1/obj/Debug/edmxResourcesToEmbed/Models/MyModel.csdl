@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="doan5_docbaoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BAIDANG">
+    <Key>
+      <PropertyRef Name="IDBaiDang" />
+    </Key>
+    <Property Name="IDBaiDang" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenBaiDang" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="TieuDe" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="UrlRequire" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="AnhDaiDien" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IDTaiKhoan" Type="Int32" Nullable="false" />
+    <Property Name="NgayDang" Type="DateTime" Precision="0" />
+    <Property Name="TrangThaiBaiDang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IDTheLoai" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TAIKHOAN" Relationship="Self.FK_BAIDANG_TAIKHOAN" FromRole="BAIDANG" ToRole="TAIKHOAN" />
+    <NavigationProperty Name="THELOAI" Relationship="Self.FK_BAIDANG_THELOAI" FromRole="BAIDANG" ToRole="THELOAI" />
+    <NavigationProperty Name="LUOTXEMs" Relationship="Self.FK_LUOTXEM_BAIDANG" FromRole="BAIDANG" ToRole="LUOTXEM" />
+  </EntityType>
+  <EntityType Name="CHUYENMUC">
+    <Key>
+      <PropertyRef Name="IDCM" />
+    </Key>
+    <Property Name="IDCM" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDCMCha" Type="Int32" />
+    <Property Name="TenCM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Link" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LUOTXEM">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="NgayThang" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NgayThang" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="IDBaiDang" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="BAIDANG" Relationship="Self.FK_LUOTXEM_BAIDANG" FromRole="LUOTXEM" ToRole="BAIDANG" />
+  </EntityType>
+  <EntityType Name="TAIKHOAN">
+    <Key>
+      <PropertyRef Name="IDTaiKhoan" />
+    </Key>
+    <Property Name="IDTaiKhoan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenTaiKhoan" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="MatKhau" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+    <Property Name="GioiTinh" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SDT" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="AnhDaiDien" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TrangThaiNguoiDung" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="QuyenHan" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="BAIDANGs" Relationship="Self.FK_BAIDANG_TAIKHOAN" FromRole="TAIKHOAN" ToRole="BAIDANG" />
+  </EntityType>
+  <EntityType Name="THELOAI">
+    <Key>
+      <PropertyRef Name="IDTheLoai" />
+    </Key>
+    <Property Name="IDTheLoai" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenTheLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UrlRequire" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BAIDANGs" Relationship="Self.FK_BAIDANG_THELOAI" FromRole="THELOAI" ToRole="BAIDANG" />
+  </EntityType>
+  <Association Name="FK_BAIDANG_TAIKHOAN">
+    <End Role="TAIKHOAN" Type="Self.TAIKHOAN" Multiplicity="1" />
+    <End Role="BAIDANG" Type="Self.BAIDANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TAIKHOAN">
+        <PropertyRef Name="IDTaiKhoan" />
+      </Principal>
+      <Dependent Role="BAIDANG">
+        <PropertyRef Name="IDTaiKhoan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BAIDANG_THELOAI">
+    <End Role="THELOAI" Type="Self.THELOAI" Multiplicity="1" />
+    <End Role="BAIDANG" Type="Self.BAIDANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="THELOAI">
+        <PropertyRef Name="IDTheLoai" />
+      </Principal>
+      <Dependent Role="BAIDANG">
+        <PropertyRef Name="IDTheLoai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LUOTXEM_BAIDANG">
+    <End Role="BAIDANG" Type="Self.BAIDANG" Multiplicity="1" />
+    <End Role="LUOTXEM" Type="Self.LUOTXEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BAIDANG">
+        <PropertyRef Name="IDBaiDang" />
+      </Principal>
+      <Dependent Role="LUOTXEM">
+        <PropertyRef Name="IDBaiDang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="doan5_docbaoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BAIDANGs" EntityType="Self.BAIDANG" />
+    <EntitySet Name="CHUYENMUCs" EntityType="Self.CHUYENMUC" />
+    <EntitySet Name="LUOTXEMs" EntityType="Self.LUOTXEM" />
+    <EntitySet Name="TAIKHOANs" EntityType="Self.TAIKHOAN" />
+    <EntitySet Name="THELOAIs" EntityType="Self.THELOAI" />
+    <AssociationSet Name="FK_BAIDANG_TAIKHOAN" Association="Self.FK_BAIDANG_TAIKHOAN">
+      <End Role="TAIKHOAN" EntitySet="TAIKHOANs" />
+      <End Role="BAIDANG" EntitySet="BAIDANGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BAIDANG_THELOAI" Association="Self.FK_BAIDANG_THELOAI">
+      <End Role="THELOAI" EntitySet="THELOAIs" />
+      <End Role="BAIDANG" EntitySet="BAIDANGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LUOTXEM_BAIDANG" Association="Self.FK_LUOTXEM_BAIDANG">
+      <End Role="BAIDANG" EntitySet="BAIDANGs" />
+      <End Role="LUOTXEM" EntitySet="LUOTXEMs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

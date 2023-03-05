@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="doan5_docbaoModelStoreContainer" CdmEntityContainer="doan5_docbaoEntities">
+    <EntitySetMapping Name="BAIDANGs">
+      <EntityTypeMapping TypeName="doan5_docbaoModel.BAIDANG">
+        <MappingFragment StoreEntitySet="BAIDANG">
+          <ScalarProperty Name="IDBaiDang" ColumnName="IDBaiDang" />
+          <ScalarProperty Name="TenBaiDang" ColumnName="TenBaiDang" />
+          <ScalarProperty Name="TieuDe" ColumnName="TieuDe" />
+          <ScalarProperty Name="UrlRequire" ColumnName="UrlRequire" />
+          <ScalarProperty Name="AnhDaiDien" ColumnName="AnhDaiDien" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="IDTaiKhoan" ColumnName="IDTaiKhoan" />
+          <ScalarProperty Name="NgayDang" ColumnName="NgayDang" />
+          <ScalarProperty Name="TrangThaiBaiDang" ColumnName="TrangThaiBaiDang" />
+          <ScalarProperty Name="IDTheLoai" ColumnName="IDTheLoai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHUYENMUCs">
+      <EntityTypeMapping TypeName="doan5_docbaoModel.CHUYENMUC">
+        <MappingFragment StoreEntitySet="CHUYENMUC">
+          <ScalarProperty Name="IDCM" ColumnName="IDCM" />
+          <ScalarProperty Name="IDCMCha" ColumnName="IDCMCha" />
+          <ScalarProperty Name="TenCM" ColumnName="TenCM" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LUOTXEMs">
+      <EntityTypeMapping TypeName="doan5_docbaoModel.LUOTXEM">
+        <MappingFragment StoreEntitySet="LUOTXEM">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NgayThang" ColumnName="NgayThang" />
+          <ScalarProperty Name="IDBaiDang" ColumnName="IDBaiDang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAIKHOANs">
+      <EntityTypeMapping TypeName="doan5_docbaoModel.TAIKHOAN">
+        <MappingFragment StoreEntitySet="TAIKHOAN">
+          <ScalarProperty Name="IDTaiKhoan" ColumnName="IDTaiKhoan" />
+          <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="AnhDaiDien" ColumnName="AnhDaiDien" />
+          <ScalarProperty Name="TrangThaiNguoiDung" ColumnName="TrangThaiNguoiDung" />
+          <ScalarProperty Name="QuyenHan" ColumnName="QuyenHan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="THELOAIs">
+      <EntityTypeMapping TypeName="doan5_docbaoModel.THELOAI">
+        <MappingFragment StoreEntitySet="THELOAI">
+          <ScalarProperty Name="IDTheLoai" ColumnName="IDTheLoai" />
+          <ScalarProperty Name="TenTheLoai" ColumnName="TenTheLoai" />
+          <ScalarProperty Name="UrlRequire" ColumnName="UrlRequire" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
