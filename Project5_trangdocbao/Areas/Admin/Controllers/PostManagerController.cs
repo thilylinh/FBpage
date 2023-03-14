@@ -1,4 +1,5 @@
-﻿using Model.DAO;
+﻿using HtmlAgilityPack;
+using Model.DAO;
 using Model.EntityFramework;
 using PagedList;
 using Project5_trangdocbao.Areas.Admin.Models;
@@ -7,6 +8,7 @@ using Project5_trangdocbao.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web.Mvc;
 
 namespace Project5_trangdocbao.Areas.Admin.Controllers
@@ -63,7 +65,7 @@ namespace Project5_trangdocbao.Areas.Admin.Controllers
                 {
                     model.IdThe = bd.IDThe;
                 }
-                model.UrlRequire = RewriteURL.RewriteUrl(bd.TenBaiDang);
+                model.UrlRequire = RewriteURL.RewriteUrl(bd.TenBaiDang.ToLower());
                 if (bd.IsDangBai)
                     model.TrangThaiBaiDang = "đã duyệt";
                 else
@@ -164,16 +166,41 @@ namespace Project5_trangdocbao.Areas.Admin.Controllers
             var dao = new TuCamDao();
             var listTu = dao.ListTuCam();
             ReturnObject returnObject = new ReturnObject();
-            foreach (var item in listTu)
-            {
-                model.NoiDung = model.NoiDung.Replace(item.Tu, item.ThayThe);
-            }
+            //foreach (var item in listTu)
+            //{
+            //    model.NoiDung = model.NoiDung.Replace(item.Tu, item.ThayThe);
+            //}
+            //string htmlString = "<p>This is a sample HTML string with some u's in it.</p>";
+            string pattern = @"u(?=[^<>]*>)";
+            string replacedString ="" ;
 
-            if (model.IsNoiDung & model.IsTieuDe)
+
+            if (listTu.Any() == true)
+            {
+                var noiDung = new HtmlDocument();
+                noiDung.LoadHtml(model.NoiDung);
+
+                foreach (var node in noiDung.DocumentNode.DescendantsAndSelf())
+                {
+                    if (!node.HasChildNodes && !node.Attributes.Any())
+                    {
+                        foreach (var item in listTu)
+                        {
+                            node.InnerHtml = node.InnerHtml.Replace(item.Tu, item.ThayThe);
+                        }
+                    }
+                }
+                model.NoiDung = noiDung.DocumentNode.OuterHtml;
+            }         
+
+
+            goto endXuLy;
+            if (listTu.Any()==true)
             {
                 foreach (var item in listTu)
                 {
-                    model.NoiDung = model.NoiDung.Replace(item.Tu, item.ThayThe);
+                    replacedString=string.Format(@"{0}(?=[^<>]*>)", item.Tu);
+                    model.NoiDung = Regex.Replace(model.NoiDung, pattern, item.ThayThe);
                     model.TieuDe = model.TieuDe.Replace(item.Tu, item.ThayThe);
                     model.PhuDe = model.PhuDe.Replace(item.Tu, item.ThayThe);
                 }
@@ -193,7 +220,7 @@ namespace Project5_trangdocbao.Areas.Admin.Controllers
                     model.NoiDung = model.NoiDung.Replace(item.Tu, item.ThayThe);
                 }
             }
-
+            endXuLy:
             //returnObject.Message = model.NoiDung;
             return Json(model);
         }
@@ -421,7 +448,7 @@ namespace Project5_trangdocbao.Areas.Admin.Controllers
                     NgayDang = bd.NgayDang,
                     TrangThaiBaiDang = bd.TrangThaiBaiDang,
                     AnhDaiDien = bd.AnhDaiDien,
-                    Doamain = domain + "doc-bao" + bd.TenBaiDang + "-" + bd.IDBaiDang,
+                    Doamain = domain + "/doc-bao/" + bd.UrlRequire + "-" + bd.IDBaiDang,
                     IsPublic = bd.IsPublic,
                 });
             }
@@ -459,6 +486,7 @@ namespace Project5_trangdocbao.Areas.Admin.Controllers
 
         public ActionResult GetDataAllowUrl(string url)
         {
+            
             // todo here
             return RedirectToAction("MyPost");
         }

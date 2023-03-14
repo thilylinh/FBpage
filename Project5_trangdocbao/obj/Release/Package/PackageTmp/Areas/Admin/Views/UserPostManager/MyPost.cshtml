@@ -56,9 +56,10 @@
                                 <th>Ảnh đại diện</th>
                                 <th>Ngày đăng</th>
                                 <th>Trạng thái</th>
+                                <th></th>
                             </tr>
                         </thead>
-                        <tbody>
+                        @*<tbody>
                             @foreach (var item in Model)
                             {
                                 <tr id="row_@item.IDBaiDang" class="tb_tenbanghi">
@@ -84,11 +85,11 @@
                                     <td class="tb_trangthai"> @item.TrangThaiBaiDang.ToUpper()</td>
                                 </tr>
                             }
-                        </tbody>
+                        </tbody>*@
                     </table>
 
 
-                    @Html.PagedListPager(Model, page => Url.Action("Index", new { page, @searchString = @ViewBag.searchstring }))
+                    @*@Html.PagedListPager(Model, page => Url.Action("Index", new { page, @searchString = @ViewBag.searchstring }))*@
                 </div>
                 <!-- /.table-responsive -->
             </div>

@@ -17,42 +17,34 @@
     @{
         if (anhdaidien != "")
         {
-            <meta property = "og:image" content = "@anhdaidien" >
+            <meta property="og:image" content="@anhdaidien">
         }
-     }
-    <meta property="fb:pages" content="328749664488580">
-    @*<title></title>*@
+    }
+    @*<meta property="fb:pages" content="328749664488580">*@
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <!-- Bootstrap -->
     @RenderSection("pagetitle", required: false)
 
-    <script src="/Assets/Client/js/JQueryV1.9.1.js"></script>
+    @*<script src="/Assets/Client/js/JQueryV1.9.1.js"></script>*@
 
     <link href="/Assets/Client/css/bootstrap.min.css" rel="stylesheet">
     <!-- for fontawesome icon css file -->
     <link href="/Assets/Client/css/font-awesome.min.css" rel="stylesheet">
     <!-- for content animate css file -->
     <link rel="/Assets/Client/stylesheet" href="css/animate.css">
-    <!-- google fonts  -->
-    <!--<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>-->
-    <!-- slick slider css file -->
-    <link href="/Assets/Client/css/slick.css" rel="stylesheet">
+
     <!-- <link href="css/theme-red.css" rel="stylesheet"> -->
     <link href="/Assets/Client/css/theme.css" rel="stylesheet">
     <!-- main site css file -->
     <link href="/Assets/Client/style.css" rel="stylesheet">
 
     @*facebook comment responsive*@
-    <style>
-        .fb-comments, .fb-comments iframe[style], .fb-like-box, .fb-like-box iframe[style], .fb-comments span, .fb-comments iframe span[style], .fb-like-box span, .fb-like-box iframe span[style] {
-            max-width: 100% !important;
-        }
+    @*<style>
+        .fb-comments, .fb-comments iframe[style], .fb-like-box, .fb-like-box iframe[style], .fb-comments span, .fb-comments iframe span[style], .fb-like-box span, .fb-like-box iframe span[style] { max-width: 100% !important; }
 
-        .container {
-            max-width: 100% !important;
-        }
-    </style>
+        .container { max-width: 100% !important; }
+    </style>*@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CFHH070TWW"></script>
     <script>
@@ -65,9 +57,9 @@
 </head>
 <body style="overflow-x:hidden">
 
-    <div id="preloader">
+    @*<div id="preloader">
         <div id="status">&nbsp;</div>
-    </div>
+    </div>*@
 
 
     <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
@@ -82,13 +74,13 @@
                     <div class="header_bottom">
                         <div class="header_bottom_left" style="white-space: nowrap;">
                             <a class="logo" href="/">
-                                <strong>CUỘC SỐNG MUÔN MÀU</strong> <span style="font-family: Arial;"></span>
+                                <strong>Science Mystery</strong> <span style="font-family: Arial;"></span>
                             </a>
                         </div>
 
                         <div class="header_top_right">
                             <form class="search_form">
-                                <input type="search" class="form-control" placeholder="Tìm kiếm trên EAUT . . ." id="txtSearch" name="txtSearch">
+                                <input type="search" class="form-control" placeholder="Find . . ." id="txtSearch" name="txtSearch">
                                 <span class="glyphicon glyphicon-search submit" aria-hidden="true">    </span>
                             </form>
                         </div>
@@ -113,28 +105,19 @@
 
         </section>
     </div>
-
-
-
-
-
     <footer id="footer">
         <div class="footer_top">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        @*<div class="single_footer_top wow fadeInRight">
-                            <h2>http://cntt.eaut.edu.vn/</h2>
-                            <p>Đồ án <br /> Bùi văn hậu(1997) <br /> Võ thành qui<br />Phạm thị hồng tâm<br/>Bùi văn hậu(1996) </p>
-                        </div>*@
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    @*<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="single_footer_top wow fadeInRight">
                             <h2>Thành viên</h2>
                             <a href="/Dang-Ki/" class="footer_link" target="_blank">Đăng kí làm thành viên</a> <br />
                             <a href="/Dang-Nhap/" class="footer_link" target="_blank">Đăng nhập</a>
                         </div>
-                    </div>
+                    </div>*@
                 </div>
             </div>
         </div>
@@ -143,26 +126,18 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="footer_bottom_left">
-                            <p>Copyright © 2020 Tạ Khánh Thiện</p>
+                            <p>Copyright © @DateTime.Now.Year Kaka</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-    <script src="/Assets/Client/js/JQueryV1.9.1.js"></script>
+    @*<script src="/Assets/Client/js/JQueryV1.9.1.js"></script>*@
     <!-- jQuery google CDN Library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- For content animatin  -->
-    <script src="/Assets/Client/js/wow.min.js"></script>
+
     <!-- bootstrap js file -->
     <script src="/Assets/Client/js/bootstrap.min.js"></script>
-    <!-- slick slider js file -->
-    <script src="/Assets/Client/js/slick.min.js"></script>
-
-    <!-- custom js file include -->
-    <script src="/Assets/Client/js/custom.js"></script>
-
-
 </body>
 </html>

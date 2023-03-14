@@ -8,18 +8,15 @@
     var listdoisong = (List<Model.EntityFramework.BAIDANG>)ViewBag.doisong;
     var listgiaitri = (List<Model.EntityFramework.BAIDANG>)ViewBag.giaitri;
     var listthethao = (List<Model.EntityFramework.BAIDANG>)ViewBag.thethao;
-  
-
-
-
     //Bài xem nhiều
     var postrelative = (List<Model.EntityFramework.BAIDANG>)ViewBag._k_relative;
 }
 
 @section pagetitle{
-    <title>KHOA CÔNG NGHỆ THÔNG TIN</title>
+    <title>SCIENCE MYSTERY</title>
 }
-
+<!-- slick slider css file -->
+<link href="/Assets/Client/css/slick.css" rel="stylesheet">
 
 <div class="content_top">
     <div class="row top5news">
@@ -43,9 +40,6 @@
                 </div>
             </div>
         </div> <!-- End content top latest slider -->
-
-
-
         <!-- BÀI ĐĂNG MỚI NHẤT_TOP từ 2 đến 4 -->
         <div class="col-lg-6 col-md-6 col-sm6 newsstop1">
             <div class="content_top_right">
@@ -68,26 +62,14 @@
         </div>
     </div>
 </div>
-
-
 <div class="content_bottom">
     <div class="col-lg-8 col-md-8">
         <!-- start content bottom left -->
         <div class="content_bottom_left">
-
-
-
-
-
-
-
-
-
-
             <!--____________________________________________________ Đời sống -->
             <div class="single_category wow fadeInDown">
                 <h2>
-                    <a class="title_text" href="#">Đời sống</a>
+                    <a class="title_text" href="#">Science Mystery</a>
                 </h2>
 
                 @foreach (var item in listdoisong)
@@ -96,22 +78,18 @@
                         <ul class="fashion_catgnav">
                             <li>
                                 <div class="catgimg2_container">
-                                    <a href="/Doc-bao/@item.UrlRequire-@item.IDBaiDang"><img alt="img" src="@item.AnhDaiDien"></a>
+                                    <a href="/doc-bao/@item.UrlRequire-@item.IDBaiDang"><img alt="img" src="@item.AnhDaiDien"></a>
                                 </div>
-                                <h2 class="catg_titile"><a href="/Doc-bao/@item.UrlRequire-@item.IDBaiDang">  @item.TenBaiDang</a></h2>
+                                <h2 class="catg_titile"><a href="/doc-bao/@item.UrlRequire-@item.IDBaiDang">  @item.TenBaiDang</a></h2>
                             </li>
                         </ul>
                     </div>
                 }
             </div>
-
-
-
-
             <!--____________________________________________________ Nghiên cứu khoa học -->
             <div class="single_category wow fadeInDown">
                 <h2>
-                    <a class="title_text" href="#">Giải trí</a>
+                    <a class="title_text" href="#">Love Animals</a>
                 </h2>
 
                 @foreach (var item in listgiaitri)
@@ -120,7 +98,7 @@
                         <ul class="fashion_catgnav">
                             <li>
                                 <div class="catgimg2_container">
-                                    <a href="/Doc-bao/@item.UrlRequire-@item.IDBaiDang"><img alt="img" src="@item.AnhDaiDien"></a>
+                                    <a href="/doc-bao/@item.UrlRequire-@item.IDBaiDang"><img alt="img" src="@item.AnhDaiDien"></a>
                                 </div>
                                 <h2 class="catg_titile"><a href="/Doc-bao/@item.UrlRequire-@item.IDBaiDang">  @item.TenBaiDang</a></h2>
                             </li>
@@ -132,7 +110,7 @@
             <!--____________________________________________________ Tin tức -->
             <div class="single_category wow fadeInDown">
                 <h2>
-                    <a class="title_text" href="#">Thể thao</a>
+                    <a class="title_text" href="#">The discovery of universe</a>
                 </h2>
 
                 @foreach (var item in listthethao)
@@ -143,27 +121,21 @@
                                 <div class="catgimg2_container">
                                     <a href="/Doc-bao/@item.UrlRequire-@item.IDBaiDang"><img alt="img" src="@item.AnhDaiDien"></a>
                                 </div>
-                                <h2 class="catg_titile"><a href="/Doc-bao/@item.UrlRequire-@item.IDBaiDang">  @item.TenBaiDang</a></h2>
+                                <h2 class="catg_titile"><a href="/doc-bao/@item.UrlRequire-@item.IDBaiDang">  @item.TenBaiDang</a></h2>
                             </li>
                         </ul>
                     </div>
                 }
             </div>
-
-            
-
-
             <!-- End business category -->
         </div><!--End content_bottom_left-->
     </div>
-
-
     <!-- start content bottom right -->
     <div class="col-lg-4 col-md-4">
         <div class="content_bottom_right">
             <!-- start single bottom rightbar -->
             <div class="single_bottom_rightbar">
-                <h2>BÀI XEM NHIỀU</h2>
+                <h2>MOST VIEWED POSTS</h2>
                 <ul class="small_catg popular_catg wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
                     @foreach (var item in postrelative)
                     {
@@ -179,10 +151,20 @@
                                     <p> @item.TieuDe</p>
                                 </div>
                             </div>
-                        </li>}
+                        </li>
+                    }
                 </ul>
-            </div> 
+            </div>
         </div>
     </div>
     <!-- start content bottom right -->
 </div>
+
+@* script *@
+<!-- For content animatin  -->
+<script src="/Assets/Client/js/wow.min.js" async></script>
+<!-- slick slider js file -->
+<script src="/Assets/Client/js/slick.min.js" async></script>
+
+<!-- custom js file include -->
+<script src="/Assets/Client/js/custom.js"></script>

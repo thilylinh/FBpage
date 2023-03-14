@@ -88,7 +88,7 @@
         <div class="content_bottom_right">
             <!-- start single bottom rightbar -->
             <div class="single_bottom_rightbar">
-                <h2>BÀI VIẾT CÙNG THỂ LOẠI</h2>
+                <h2>Related Articles</h2>
                 <ul class="small_catg popular_catg">
                     @foreach (var item in top10cungtheloai)
                     {
@@ -113,9 +113,9 @@
                 <h2>
                     @foreach (var item in getinfoposter)
                     {
-                        <a href="/Nguoi-dang/@item.TenTaiKhoan-@item.IDTaiKhoan">
-                            BÀI VIẾT CÙNG NGƯỜI ĐĂNG
-                        </a>
+                    <a href="/Nguoi-dang/@item.TenTaiKhoan-@item.IDTaiKhoan">
+                        RELATED POSTS BY AUTHOR
+                    </a>
                     }
                 </h2>
                 <ul class="small_catg popular_catg">

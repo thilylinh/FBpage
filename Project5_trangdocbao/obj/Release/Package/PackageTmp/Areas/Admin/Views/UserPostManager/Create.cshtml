@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Create";
-    Layout = "~/Areas/Admin/Views/Shared/_Layout_User.cshtml";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
 
@@ -11,9 +11,6 @@
     .form-group {
         padding-bottom: 25px !important;
     }
-
-
-
     .form-control123 {
         display: block;
         width: 60%;
@@ -34,10 +31,6 @@
         float: left;
         margin-right: 10px;
     }
-
-
-
-
 
     .form-group1122 {
         clear: both;
@@ -83,8 +76,6 @@
             </div>
         </div>
 
-
-
         @*NỘI DUNG BÀI ĐĂNG___________________________________*@
         <div class="form-group">
             @Html.LabelFor(model => model.NoiDung, htmlAttributes: new { @class = "control-laber col-md-2" })
@@ -93,8 +84,6 @@
                 @Html.ValidationMessageFor(model => model.NoiDung, "", new { @class = "text-danger" })
             </div>
         </div>
-
-
 
         @*CHỌN THỂ LOẠI__________________________________*@
         <div class="form-group">

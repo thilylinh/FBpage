@@ -15,7 +15,7 @@ namespace Project5_trangdocbao
             //Map cho trang đọc báo
             routes.MapRoute(
                 name: "DocBao",
-                url: "Doc-bao/{UrlRequire}-{id}",
+                url: "doc-bao/{UrlRequire}-{id}",
                 defaults: new { controller = "DocBao", action = "Index", id = UrlParameter.Optional }
             );
 

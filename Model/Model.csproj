@@ -72,17 +72,9 @@
     <Compile Include="EntityFramework\PageFacebook.cs" />
     <Compile Include="EntityFramework\TAIKHOAN.cs" />
     <Compile Include="EntityFramework\THELOAI.cs" />
-    <Compile Include="Migrations\202302220437202_init.cs" />
-    <Compile Include="Migrations\202302220437202_init.Designer.cs">
-      <DependentUpon>202302220437202_init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302251354504_update-type.cs" />
-    <Compile Include="Migrations\202302251354504_update-type.Designer.cs">
-      <DependentUpon>202302251354504_update-type.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202303030749204_add_ispublic.cs" />
-    <Compile Include="Migrations\202303030749204_add_ispublic.Designer.cs">
-      <DependentUpon>202303030749204_add_ispublic.cs</DependentUpon>
+    <Compile Include="Migrations\202303050715164_init.cs" />
+    <Compile Include="Migrations\202303050715164_init.Designer.cs">
+      <DependentUpon>202303050715164_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -100,14 +92,8 @@
     <Content Include="Content\PagedList.css" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202302220437202_init.resx">
-      <DependentUpon>202302220437202_init.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302251354504_update-type.resx">
-      <DependentUpon>202302251354504_update-type.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202303030749204_add_ispublic.resx">
-      <DependentUpon>202303030749204_add_ispublic.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202303050715164_init.resx">
+      <DependentUpon>202303050715164_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

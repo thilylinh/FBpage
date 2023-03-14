@@ -6,6 +6,10 @@ namespace Project5_trangdocbao.Common
     {
         public static string RewriteUrl(string unicode)
         {
+            string pattern = @"[^a-zA-Z]+";
+            string replacement = " ";
+
+            unicode = Regex.Replace(unicode, pattern, replacement);
             unicode = Regex.Replace(unicode, "[áàảãạăắằẳẵặâấầẩẫậ]", "a");
             unicode = Regex.Replace(unicode, "[óòỏõọôồốổỗộơớờởỡợ]", "o");
             unicode = Regex.Replace(unicode, "[éèẻẽẹêếềểễệ]", "e");
